@@ -1,0 +1,48 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.chatapp;
+
+/**
+ *
+ * @author Student
+ */
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        Login login = new Login();
+
+        System.out.println("=== USER REGISTRATION ===");
+
+        System.out.print("Enter a username: ");
+        String username = input.nextLine();
+
+        System.out.print("Enter a password: ");
+        String password = input.nextLine();
+
+        System.out.print("Enter your South African number (+27...): ");
+        String phoneNumber = input.nextLine();
+
+        String registration = login.registerUser(username, password, phoneNumber);
+
+        System.out.println(registration);
+
+        System.out.println("\n=== USER LOGIN ===");
+
+        System.out.print("Enter username: ");
+        String loginUsername = input.nextLine();
+
+        System.out.print("Enter password: ");
+        String loginPassword = input.nextLine();
+
+        boolean loggedIn = login.loginUser(loginUsername, loginPassword);
+
+        System.out.println(login.returnLoginStatus(loggedIn));
+    }
+}
