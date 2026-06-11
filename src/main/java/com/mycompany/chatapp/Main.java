@@ -45,4 +45,9 @@ public class Main {
 
         System.out.println(login.returnLoginStatus(loggedIn));
     }
+    System.out.println("\n===== MAIN MENU =====");
+            System.out.println("1) Send Messages");
+            System.out.println("2) Show recently sent messages");
+            System.out.println("3) Quit");
+            System.out.println("4) Stored Messages");
 }
