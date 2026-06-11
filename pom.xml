@@ -31,17 +31,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-<<<<<<< Updated upstream
+
             <groupId>com.seepine</groupId>
             <artifactId>json</artifactId>
             <version>0.1.0</version>
             <type>jar</type>
-=======
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20232023</version>
-            
->>>>>>> Stashed changes
+
         </dependency>
     </dependencies>
     <properties>
