@@ -225,3 +225,36 @@ public static String deleteByHash(String hash) {
         return "Hash not found.";
     }
 }
+public static String printReport() {
+
+    StringBuilder report =
+            new StringBuilder("=== FULL REPORT ===\n");
+
+    for (String msg : storedMessages) {
+        report.append(msg).append("\n");
+    }
+
+    return report.toString();
+}
+
+public static String generateMessageID() {
+
+    long number =
+            (long) (Math.random() * 10000000000L);
+
+    return String.format("%010d", number);
+}
+
+public String getMessageHash() {
+    return messageHash;
+}
+
+public boolean checkMessageID() {
+    return messageID != null && messageID.length() == 10;
+}
+
+public String getMessageID() {
+    return messageID;
+}
+
+}
