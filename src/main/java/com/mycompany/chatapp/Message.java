@@ -196,3 +196,32 @@ public static String searchByRecipient(String recipient) {
     if (result.length() == 0) {
         return "No messages found.";
     }
+public static String searchByRecipient(String recipient) {
+
+    StringBuilder result = new StringBuilder();
+
+    for (int i = 0; i < recipientList.size(); i++) {
+
+        if (recipientList.get(i).equals(recipient)
+                && i < storedMessages.size()) {
+
+            result.append(storedMessages.get(i))
+                    .append("\n");
+        }
+    }
+
+    if (result.length() == 0) {
+        return "No messages found.";
+    }
+
+    return result.toString();
+}
+
+public static String deleteByHash(String hash) {
+
+    int index = messageHashes.indexOf(hash);
+
+    if (index == -1) {
+        return "Hash not found.";
+    }
+}
