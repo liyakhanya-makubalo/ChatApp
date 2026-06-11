@@ -13,11 +13,12 @@ import java.util.Scanner;
  * @author Student
  */
 public class Message {
-public static List<String> sentMessages = new ArrayList<>();
-public static List<String> storedMessages = new ArrayList<>();
-public static List<String> messageHashes = new ArrayList<>();
-public static List<String> messageIDs = new ArrayList<>();
-public static List<String> recipientList = new ArrayList<>();
+
+private static List<String> sentMessages = new ArrayList<>();
+private static List<String> storedMessages = new ArrayList<>();
+private static List<String> messageHashes = new ArrayList<>();
+private static List<String> messageIDs = new ArrayList<>();
+private static List<String> recipientList = new ArrayList<>();
 
 private String messageID;
 private int messageNumber;
@@ -257,6 +258,3 @@ public String getMessageID() {
 }
 
 }
-
-    
-
